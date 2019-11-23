@@ -21,9 +21,10 @@ extension PurchaseableView where Self : UIViewController {
     /// showing a `UIAlertController` object on the screen we want to make sure the calling class is
     /// from a `UIViewController`, therefore we can remain certain our ability to `present` is available.
     func showAddToCartSuccessful(_ message: String? = nil) {
-        let controller = UIAlertController(title: "Success", message: message ?? "Your item has been added successfully", preferredStyle: .alert)
+        let controller = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
         controller.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
         self.present(controller, animated: true, completion: nil)
     }
 }
+

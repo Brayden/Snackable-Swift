@@ -1,5 +1,5 @@
 //
-//  ProtocolExamplesTests.swift
+//  AppleGrannySmithTests.swift
 //  ProtocolExamplesTests
 //
 //  Created by Brayden Wilmoth on 11/22/19.
@@ -9,10 +9,20 @@
 import XCTest
 @testable import ProtocolExamples
 
-
-class ProtocolExamplesTests: XCTestCase {
+class AppleGrannySmithTests: XCTestCase {
+    var item = AppleGrannySmith(displayName: "Granny Smith", price: 1.99)
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+    
+    func testSetupPurchaseable() {
+        item.setupPurchaseable()
+        XCTAssertFalse(item.allowsDiscounts!)
+    }
+    
+    func testCanEat() {
+        XCTAssertTrue(item.canEat())
     }
 
     override func tearDown() {

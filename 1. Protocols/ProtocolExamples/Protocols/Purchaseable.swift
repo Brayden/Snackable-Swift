@@ -14,7 +14,7 @@ protocol Purchaseable {
     var allowsDiscounts: Bool? { get set }
     
     init(displayName: String, price: Double)
-    func addToCart()
+    func addToCart() -> Bool
     mutating func setupPurchaseable()
     mutating func shouldApplyDiscount(amount: Double) -> Bool
 }
@@ -26,8 +26,9 @@ extension Purchaseable {
     /// While in the original protocol declaration you cannot create default function implementations, you can
     /// do so within a protocol extension. This is an example of how any object that adheres to `Purchaseable`
     /// can use the `addToCart()` function without having to add logic themselves in each view independently.
-    func addToCart() {
-        print("Add \(displayName ?? "item") to cart")
+    @discardableResult
+    func addToCart() -> Bool {
+        return true
     }
     
     
@@ -38,9 +39,11 @@ extension Purchaseable {
     /// perhaps you don't care if the result was successful or not and do not want to deal with the returned value.
     @discardableResult
     mutating func shouldApplyDiscount(amount: Double) -> Bool {
-        if allowsDiscounts ?? false {
-            price! -= amount
-            return true
+        if let allowsDiscounts = allowsDiscounts {
+            if allowsDiscounts {
+                price! -= amount
+                return true
+            }
         }
         
         return false

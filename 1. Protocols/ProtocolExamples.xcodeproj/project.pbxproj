@@ -19,6 +19,10 @@
 		547A103823883F5A0005F729 /* PurchaseableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A103723883F5A0005F729 /* PurchaseableView.swift */; };
 		547A103B238842E60005F729 /* AppleGrannySmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A103A238842E60005F729 /* AppleGrannySmith.swift */; };
 		547A103D238846530005F729 /* ApplePlastic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A103C238846530005F729 /* ApplePlastic.swift */; };
+		547A104223887F770005F729 /* PurchaseableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A104123887F770005F729 /* PurchaseableTests.swift */; };
+		547A10472388A58A0005F729 /* AppleGrannySmithTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A10462388A58A0005F729 /* AppleGrannySmithTests.swift */; };
+		547A10492388A86F0005F729 /* ApplePlasticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A10482388A86F0005F729 /* ApplePlasticTests.swift */; };
+		547A104B2388A8FB0005F729 /* PurchaseableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A104A2388A8FB0005F729 /* PurchaseableViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		547A103723883F5A0005F729 /* PurchaseableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseableView.swift; sourceTree = "<group>"; };
 		547A103A238842E60005F729 /* AppleGrannySmith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGrannySmith.swift; sourceTree = "<group>"; };
 		547A103C238846530005F729 /* ApplePlastic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePlastic.swift; sourceTree = "<group>"; };
+		547A104123887F770005F729 /* PurchaseableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseableTests.swift; sourceTree = "<group>"; };
+		547A10462388A58A0005F729 /* AppleGrannySmithTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGrannySmithTests.swift; sourceTree = "<group>"; };
+		547A10482388A86F0005F729 /* ApplePlasticTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePlasticTests.swift; sourceTree = "<group>"; };
+		547A104A2388A8FB0005F729 /* PurchaseableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseableViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,8 @@
 		547A1025238834950005F729 /* ProtocolExamplesTests */ = {
 			isa = PBXGroup;
 			children = (
+				547A10432388A3860005F729 /* Protocols */,
+				547A10442388A5720005F729 /* Products */,
 				547A1026238834950005F729 /* ProtocolExamplesTests.swift */,
 				547A1028238834950005F729 /* Info.plist */,
 			);
@@ -144,6 +154,32 @@
 				547A103723883F5A0005F729 /* PurchaseableView.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		547A10432388A3860005F729 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				547A104123887F770005F729 /* PurchaseableTests.swift */,
+				547A104A2388A8FB0005F729 /* PurchaseableViewTests.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		547A10442388A5720005F729 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				547A10452388A5790005F729 /* Apple */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		547A10452388A5790005F729 /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				547A10462388A58A0005F729 /* AppleGrannySmithTests.swift */,
+				547A10482388A86F0005F729 /* ApplePlasticTests.swift */,
+			);
+			path = Apple;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				547A104223887F770005F729 /* PurchaseableTests.swift in Sources */,
 				547A1027238834950005F729 /* ProtocolExamplesTests.swift in Sources */,
+				547A10472388A58A0005F729 /* AppleGrannySmithTests.swift in Sources */,
+				547A10492388A86F0005F729 /* ApplePlasticTests.swift in Sources */,
+				547A104B2388A8FB0005F729 /* PurchaseableViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
