@@ -65,3 +65,21 @@ func testShouldApplyDiscount() {
 ```
 
 For those who may be less familiar with writing unit tests, all your functions should be prefixed with `test` in the name for the compiler to automatically pick up on running them when you press CMD + U.
+
+Throughout these three functions we can reuse a single `MockPurchaseable` item so let's declare a single variable above our `setUp()` function. We are declaring it as a variable because as you see later there will be some mutating to the object.
+
+```
+var mockItem = MockPurchaseable(displayName: "Test Item", price: 9.99)
+```
+
+Testing initialization.. here we go. When we test an object for being initialized we want to know that it is not `nil`, actually having a reference value, and that the properties within it are what we expect – also not `nil` in this example. This is what our first function looks like:
+
+```
+func testInitialization() {
+	XCTAssertNotNil(mockItem)
+	XCTAssertEqual(mockItem.displayName, "Test Item")
+	XCTAssertEqual(mockItem.price, 9.99)
+}
+```
+
+Just as we had described in our action plan above, we check that it's not `nil`, it's property `displayName` is what we expect it to be (aka what we assigned in our class level variable), and same with price. Easy, right?
