@@ -83,3 +83,32 @@ func testInitialization() {
 ```
 
 Just as we had described in our action plan above, we check that it's not `nil`, it's property `displayName` is what we expect it to be (aka what we assigned in our class level variable), and same with price. Easy, right?
+
+Two tests to go. Let's create a test for our `addToCart()` function. In this example we did not go into fully implementing the default function in our protocol because every application will handle adding to cart differently, whether it's making a network request, adding to a singleton to submit at a later time, or any number of possibilities. The one piece we did, however, put into the function was to simply return true to fulfill its return responsibility. No matter when we add something to the cart it says `true` and we know it's complete. 
+
+```
+func  testAddToCart() {
+    XCTAssert(mockItem.addToCart())
+}
+```
+
+> Note: Once you add your custom implementation logic your test will
+> most certainly be different and should test adding items that are both
+> in and out of stock.
+
+And now for our final test, applying a discount. If you recall from our earlier implementation only one of our two Apple structs support discounts so we need to write a test that assures that both cases are tested and covered. Here's what we end up with:
+
+```
+func testShouldApplyDiscount() {
+    mockItem.allowsDiscounts = false
+    XCTAssertEqual(mockItem.shouldApplyDiscount(amount: 1.00), false)
+
+    mockItem.allowsDiscounts = true
+    XCTAssertEqual(mockItem.shouldApplyDiscount(amount: 1.00), true)
+}
+```
+
+First we turn our `mockItem` property for `allowsDiscounts` to false. Try to apply a discount to it and we expect false – allowing the first two lines of our test to pass.
+The second two lines are doing the opposite, saying we allow discounts and when we call the function we expect it to pass. Ta-da!
+
+Now we won't cover implementing tests in all of the classes we created in this project but if you are curious you can look at the project in Github and see that all of the classes we created have 100% test coverage in that project. Feel free to dig in and check out how we got there!
