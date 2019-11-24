@@ -14,14 +14,6 @@ Okay – so this may seem like a lot but I promise you it's not. Protocols are g
 # Planning
 
 ```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
-```
-
-```mermaid
 graph TB
 A[Purchaseable] --> B[Apple]
 B --> C((Granny Smith))
