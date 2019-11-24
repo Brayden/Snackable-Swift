@@ -11,6 +11,25 @@ Our project manager has informed us that we need to make an application where us
 
 Okay – so this may seem like a lot but I promise you it's not. Protocols are going to rescue us from what might sound like a nightmare.
 
+# Planning
+
+```mermaid
+graph LR
+A[Square Rect] -- Link text --> B((Circle))
+A --> C(Round Rect)
+B --> D{Rhombus}
+C --> D
+```
+
+```mermaid
+graph TB
+A[Purchaseable] --> B[Apple]
+B --> C((Granny Smith))
+B --> D((Plastic Apple))
+
+E[PurchaseableView] -- Connects to UIViewController --> F((UIViewController))
+```
+
 # QA Testing
 
 Phew... so far we've not only handled a barrage of requirements from our project manager but we have now also used protocols to meet the requirements. At least, we think. Now it's time for us to hand it off to our QA team to ensure our code is bug-free and works as expected.
