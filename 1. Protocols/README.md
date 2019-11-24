@@ -19,7 +19,7 @@ A[Purchaseable] --> B[Apple]
 B --> C((Granny Smith))
 B --> D((Plastic Apple))
 
-E[PurchaseableView] -- Connects to UIViewController --> F((UIViewController))
+E[PurchaseableView] -- Connects to UIViewController --> F{UIViewController}
 ```
 
 # QA Testing
